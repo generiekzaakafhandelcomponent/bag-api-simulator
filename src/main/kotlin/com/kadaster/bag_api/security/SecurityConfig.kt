@@ -27,11 +27,13 @@ class SecurityConfig {
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http
             .authorizeHttpRequests { auth ->
-                auth.requestMatchers("/api/**").authenticated()
+                // changed the api permission for test purpose
+                auth.requestMatchers("/api/adressen").permitAll()
+                    .requestMatchers("/api/**").permitAll()
                     .anyRequest().permitAll()
             }
-            .httpBasic {  }
-            .csrf {  }
+            .httpBasic { }
+            .csrf { csrf -> csrf.disable() }
 
         return http.build()
     }

@@ -16,13 +16,13 @@ class AddressRepository {
             openbareRuimteNaam = "Spui",
             korteNaam = "Spui",
             huisnummer = 70,
-            huisletter = "B",
+            huisletter = "A",
             postcode = "2511BT",
             woonplaatsNaam = "'s-Gravenhage",
             nummeraanduidingIdentificatie = "1234567890123456",
             openbareRuimteIdentificatie = "9876543210987654",
             woonplaatsIdentificatie = "5678",
-            adresseerbaarObjectIdentificatie = "1122334455667788"
+            adresseerbaarObjectIdentificatie = "0518010000583529"
         ),
         createAddress(
             openbareRuimteNaam = "Dorpsstraat",
@@ -34,7 +34,7 @@ class AddressRepository {
             nummeraanduidingIdentificatie = "9876543210123456",
             openbareRuimteIdentificatie = "1234567890123456",
             woonplaatsIdentificatie = "4321",
-            adresseerbaarObjectIdentificatie = "5566778899001122"
+            adresseerbaarObjectIdentificatie = "0518010000583530"
         )
     )
 
