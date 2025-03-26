@@ -1,12 +1,11 @@
 package com.kadaster.bag_api.model
 
-// Links Model
 data class Links(
     val self: Link,
-    val openbareRuimte: Link?,
-    val nummeraanduiding: Link?,
-    val woonplaats: Link?,
-    val adresseerbaarObject: Link?,
+    val openbareRuimte: Link? = null,
+    val nummeraanduiding: Link? = null,
+    val woonplaats: Link? = null,
+    val adresseerbaarObject: Link? = null,
     val panden: List<Link> = emptyList()
 )
 

@@ -3,7 +3,12 @@ package com.kadaster.bag_api.model
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class AddressResponse(
-    val adressen: List<Address>
+    @JsonProperty("_embedded") val embedded: Embedded?,
+    @JsonProperty("_links") val links: Links,
+)
+
+data class Embedded(
+    val adressen: List<Address>?
 )
 
 data class Address(

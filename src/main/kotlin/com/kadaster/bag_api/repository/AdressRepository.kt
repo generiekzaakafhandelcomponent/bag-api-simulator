@@ -3,6 +3,7 @@ package com.kadaster.bag_api.repository
 
 import com.kadaster.bag_api.model.Address
 import com.kadaster.bag_api.model.AddressResponse
+import com.kadaster.bag_api.model.Embedded
 import com.kadaster.bag_api.model.Geconstateerd
 import com.kadaster.bag_api.model.InOnderzoek
 import com.kadaster.bag_api.model.Link
@@ -18,11 +19,11 @@ class AddressRepository {
             huisnummer = 70,
             huisletter = "A",
             postcode = "2511BT",
-            woonplaatsNaam = "'s-Gravenhage",
+            woonplaatsNaam = "Funenpark",
             nummeraanduidingIdentificatie = "1234567890123456",
             openbareRuimteIdentificatie = "9876543210987654",
             woonplaatsIdentificatie = "5678",
-            adresseerbaarObjectIdentificatie = "0518010000583529"
+            adresseerbaarObjectIdentificatie = "AOI0518010000583529"
         ),
         createAddress(
             openbareRuimteNaam = "Dorpsstraat",
@@ -34,7 +35,7 @@ class AddressRepository {
             nummeraanduidingIdentificatie = "9876543210123456",
             openbareRuimteIdentificatie = "1234567890123456",
             woonplaatsIdentificatie = "4321",
-            adresseerbaarObjectIdentificatie = "0518010000583530"
+            adresseerbaarObjectIdentificatie = "AOI0518010000583530"
         )
     )
 
@@ -44,12 +45,20 @@ class AddressRepository {
         huisletter: String?,
         huisnummertoevoeging: String?
     ): AddressResponse? {
-        return addresses.filter { it.postcode == postcode && it.huisnummer == huisnummer &&
-                    (huisletter == null || it.huisletter == huisletter) &&
-                    (huisnummertoevoeging == null || it.huisnummertoevoeging == huisnummertoevoeging)
+        val filteredAddresses = addresses.filter { address ->
+            address.postcode == postcode && address.huisnummer == huisnummer &&
+                    (huisletter == null || address.huisletter == huisletter) &&
+                    (huisnummertoevoeging == null || address.huisnummertoevoeging == huisnummertoevoeging)
         }
-            .takeIf { it.isNotEmpty() }
-            ?.let { AddressResponse(adressen = it) }
+
+        return filteredAddresses.takeIf { it.isNotEmpty() }?.let {
+            AddressResponse(
+                embedded = Embedded(it),
+                links = Links(
+                    self = Link("https://api.bag.nl/adressen")
+                )
+            )
+        }
     }
 
     private fun createAddress(
@@ -80,35 +89,36 @@ class AddressRepository {
             indicatieNevenadres = false,
             adresregel5 = "$korteNaam $huisnummer ${huisletter.orEmpty()}",
             adresregel6 = "$postcode $woonplaatsNaam",
-            geconstateerd = Geconstateerd(woonplaats = true, openbareRuimte = true, nummeraanduiding = true),
-            inonderzoek = createDefaultInOnderzoek(),
-            links = createLinks()
+            geconstateerd = Geconstateerd(
+                woonplaats = true,
+                openbareRuimte = true,
+                nummeraanduiding = true
+            ),
+            inonderzoek = InOnderzoek(
+                openbareRuimteNaam = false,
+                korteNaam = false,
+                huisnummer = false,
+                huisletter = false,
+                huisnummertoevoeging = false,
+                postcode = false,
+                woonplaatsNaam = false,
+                openbareRuimteLigtIn = false,
+                openbareRuimteStatus = false,
+                nummeraanduidingLigtIn = false,
+                nummeraanduidingligtAan = false,
+                nummeraanduidingStatus = false,
+                toelichting = emptyList(),
+                adresregel5 = false,
+                adresregel6 = false
+            ),
+            links = Links(
+                self = Link(href = "https://api.bag.nl/adressen/$nummeraanduidingIdentificatie"),
+                openbareRuimte = Link(href = "https://api.bag.nl/openbareruimte/$openbareRuimteIdentificatie"),
+                nummeraanduiding = Link(href = "https://api.bag.nl/nummeraanduiding/$nummeraanduidingIdentificatie"),
+                woonplaats = Link(href = "https://api.bag.nl/woonplaats/$woonplaatsIdentificatie"),
+                adresseerbaarObject = Link(href = "https://api.bag.nl/adresseerbaarobject/$adresseerbaarObjectIdentificatie"),
+                panden = listOf(Link(href = "https://api.bag.nl/panden/9876543210123456"))
+            )
         )
     }
-
-    private fun createDefaultInOnderzoek() = InOnderzoek(
-        openbareRuimteNaam = false,
-        korteNaam = false,
-        huisnummer = false,
-        huisletter = false,
-        huisnummertoevoeging = false,
-        postcode = false,
-        woonplaatsNaam = false,
-        openbareRuimteLigtIn = false,
-        openbareRuimteStatus = false,
-        nummeraanduidingLigtIn = false,
-        nummeraanduidingligtAan = false,
-        nummeraanduidingStatus = false,
-        adresregel5 = false,
-        adresregel6 = false
-    )
-
-    private fun createLinks() = Links(
-        self = Link(href = "https://api.bag.nl/adressen/1"),
-        openbareRuimte = Link(href = "https://api.bag.nl/openbareruimte/1"),
-        nummeraanduiding = Link(href = "https://api.bag.nl/nummeraanduiding/1"),
-        woonplaats = Link(href = "https://api.bag.nl/woonplaats/1"),
-        adresseerbaarObject = Link(href = "https://api.bag.nl/adresseerbaarobject/1"),
-        panden = listOf(Link(href = "https://api.bag.nl/panden/1"))
-    )
 }
