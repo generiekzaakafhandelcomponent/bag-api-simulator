@@ -23,7 +23,7 @@ class AddressRepository {
             nummeraanduidingIdentificatie = "1234567890123456",
             openbareRuimteIdentificatie = "9876543210987654",
             woonplaatsIdentificatie = "5678",
-            adresseerbaarObjectIdentificatie = "AOI0518010000583529"
+            adresseerbaarObjectIdentificatie = "0518010000583529"
         ),
         createAddress(
             openbareRuimteNaam = "Dorpsstraat",
@@ -35,7 +35,7 @@ class AddressRepository {
             nummeraanduidingIdentificatie = "9876543210123456",
             openbareRuimteIdentificatie = "1234567890123456",
             woonplaatsIdentificatie = "4321",
-            adresseerbaarObjectIdentificatie = "AOI0518010000583530"
+            adresseerbaarObjectIdentificatie = "0518010000583530"
         )
     )
 
