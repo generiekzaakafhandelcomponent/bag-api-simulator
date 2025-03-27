@@ -57,7 +57,6 @@ class AddressRepository {
     }
 
     companion object {
-        private val logger = KotlinLogging.logger {}
         private val objectMapper = jacksonObjectMapper().findAndRegisterModules()
     }
 }

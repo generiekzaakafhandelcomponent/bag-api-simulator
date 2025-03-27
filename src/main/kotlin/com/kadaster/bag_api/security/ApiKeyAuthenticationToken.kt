@@ -16,12 +16,9 @@ class ApiKeyAuthenticationToken(
     }
 
     constructor(apiKey: String, apiSecret: String) : this(apiKey, apiSecret, emptyList(), false)
-    constructor(apiKey: String, apiSecret: String, authorities: Collection<GrantedAuthority>) :
-            this(apiKey, apiSecret, authorities, true)
 
     override fun getCredentials(): Any = apiSecret
     override fun getPrincipal(): Any = apiKey
 
-    override fun eraseCredentials() = super.eraseCredentials()
 }
 
