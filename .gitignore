@@ -36,5 +36,10 @@ out/
 ### VS Code ###
 .vscode/
 
+# Credentials and secrets
+.env
+
+*.env.properties
+
 ### Kotlin ###
 .kotlin
