@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/lvbag/individuelebevragingen/v1/adressen")
-class AddressController(private val addressService: AddressService) {
+class AddressController(
+    private val addressService: AddressService
+) {
 
     @GetMapping
     fun getAddress(

@@ -1,55 +1,49 @@
 package com.kadaster.bag_api.security
 
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.core.env.Environment
+import org.springframework.security.authentication.AuthenticationManager
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
-import org.springframework.security.core.userdetails.User
-import org.springframework.security.core.userdetails.UserDetails
-import org.springframework.security.core.userdetails.UserDetailsService
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
-import org.springframework.security.crypto.password.PasswordEncoder
-import org.springframework.security.provisioning.InMemoryUserDetailsManager
 import org.springframework.security.web.SecurityFilterChain
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher
 
 @Configuration
 @EnableWebSecurity
-class SecurityConfig {
-
-    @Value("\${auth.username}")
-    lateinit var username: String
-
-    @Value("\${auth.password}")
-    lateinit var password: String
+class SecurityConfig(
+    private val apiKeyAuthenticationProvider: ApiKeyAuthenticationProvider,
+    private val environment: Environment
+) {
 
     @Bean
-    fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
+    fun securityFilterChain(http: HttpSecurity, authenticationManager: AuthenticationManager): SecurityFilterChain {
         http
-            .authorizeHttpRequests { auth ->
-                // changed the api permission for test purpose
-                auth.requestMatchers("/api/adressen").permitAll()
-                    .requestMatchers("/api/**").permitAll()
+            .csrf { it.disable() }
+            .authorizeHttpRequests {
+                it
+                    .requestMatchers("/api/**").authenticated()
                     .anyRequest().permitAll()
             }
-            .httpBasic { }
-            .csrf { csrf -> csrf.disable() }
+            .authenticationManager(authenticationManager)
+            .addFilterBefore(apiKeyAuthFilter(authenticationManager), UsernamePasswordAuthenticationFilter::class.java)
 
         return http.build()
     }
 
     @Bean
-    fun passwordEncoder(): PasswordEncoder {
-        return BCryptPasswordEncoder()
+    fun apiKeyAuthFilter(authenticationManager: AuthenticationManager): ApiKeyAuthFilter {
+        return ApiKeyAuthFilter(environment, AntPathRequestMatcher("/api/**")).apply {
+            setAuthenticationManager(authenticationManager)
+        }
     }
 
     @Bean
-    fun userDetailsService(passwordEncoder: PasswordEncoder): UserDetailsService {
-        val user: UserDetails = User.builder()
-            .username(username)
-            .password(passwordEncoder.encode(password))
-            .roles("USER")
+    fun authenticationManager(http: HttpSecurity): AuthenticationManager {
+        return http.getSharedObject(AuthenticationManagerBuilder::class.java)
+            .authenticationProvider(apiKeyAuthenticationProvider)
             .build()
-        return InMemoryUserDetailsManager(user)
     }
 }

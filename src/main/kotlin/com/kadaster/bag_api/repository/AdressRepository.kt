@@ -2,13 +2,10 @@ package com.kadaster.bag_api.repository
 
 
 import com.fasterxml.jackson.core.type.TypeReference
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.kadaster.bag_api.model.Address
 import com.kadaster.bag_api.model.AddressResponse
 import com.kadaster.bag_api.model.Embedded
-import com.kadaster.bag_api.model.Geconstateerd
-import com.kadaster.bag_api.model.InOnderzoek
 import com.kadaster.bag_api.model.Link
 import com.kadaster.bag_api.model.Links
 import io.github.oshai.kotlinlogging.KotlinLogging
@@ -25,20 +22,23 @@ class AddressRepository {
         huisletter: String?,
         huisnummertoevoeging: String?
     ): AddressResponse? {
+
+        val normalizedPostcode = normalize(postcode)
+        val normalizedHuisletter = normalize(huisletter)
+        val normalizedToevoeging = normalize(huisnummertoevoeging)
+
         val matchingAddresses = addresses.filter { address ->
-            address.postcode == postcode &&
+            normalize(address.postcode) == normalizedPostcode &&
                     address.huisnummer == huisnummer &&
-                    (huisletter == null || address.huisletter == huisletter) &&
-                    (huisnummertoevoeging == null || address.huisnummertoevoeging == huisnummertoevoeging)
+                    (normalizedHuisletter == null || normalize(address.huisletter) == normalizedHuisletter) &&
+                    (normalizedToevoeging == null || normalize(address.huisnummertoevoeging) == normalizedToevoeging)
         }
 
-        return if (matchingAddresses.isNotEmpty()) {
+        return matchingAddresses.takeIf { it.isNotEmpty() }?.let {
             AddressResponse(
-                embedded = Embedded(matchingAddresses),
+                embedded = Embedded(it),
                 links = Links(self = Link("https://api.bag.nl/adressen"))
             )
-        } else {
-            null
         }
     }
 
@@ -48,6 +48,12 @@ class AddressRepository {
         }
         val typeRef = object : TypeReference<List<Address>>() {}
         return objectMapper.readValue(resource, typeRef)
+    }
+
+    private fun normalize(input: String?): String? {
+        return input
+            ?.lowercase()
+            ?.replace("[^a-z0-9]".toRegex(), "") // removes special characters and whitespace
     }
 
     companion object {
