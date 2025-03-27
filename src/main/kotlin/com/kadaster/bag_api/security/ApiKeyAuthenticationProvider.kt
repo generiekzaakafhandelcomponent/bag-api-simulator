@@ -1,6 +1,6 @@
 package com.kadaster.bag_api.security
 
-import org.springframework.beans.factory.annotation.Value
+import com.kadaster.bag_api.config.AuthProperties
 import org.springframework.security.authentication.AuthenticationProvider
 import org.springframework.security.authentication.BadCredentialsException
 import org.springframework.security.core.Authentication
@@ -8,15 +8,14 @@ import org.springframework.stereotype.Component
 
 @Component
 class ApiKeyAuthenticationProvider(
-    @Value("\${auth.api-key}") private val configuredApiKey: String,
-    @Value("\${auth.api-secret}") private val configuredApiSecret: String
+    private val authProperties: AuthProperties
 ) : AuthenticationProvider {
 
     override fun authenticate(authentication: Authentication): Authentication {
         val providedKey = authentication.principal as String
         val providedSecret = authentication.credentials as String
 
-        if (providedKey == configuredApiKey && providedSecret == configuredApiSecret) {
+        if (providedKey == authProperties.apiKey && providedSecret == authProperties.apiSecret) {
             return ApiKeyAuthenticationToken(providedKey, providedSecret, emptyList(), true)
         }
 
