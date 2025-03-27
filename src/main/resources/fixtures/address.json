@@ -1,16 +1,16 @@
 [
   {
-    "openbareRuimteNaam": "Straatnaam",
-    "korteNaam": "Str",
-    "huisnummer": 70,
+    "openbareRuimteNaam": "Keizersgracht",
+    "korteNaam": "Kg",
+    "huisnummer": 453,
     "huisletter": "A",
     "huisnummertoevoeging": "1",
-    "postcode": "2511BT",
-    "woonplaatsNaam": "Plaatsnaam",
+    "postcode": "1017DK",
+    "woonplaatsNaam": "Amsterdam",
     "nummeraanduidingIdentificatie": "1234567890123456",
     "openbareRuimteIdentificatie": "2345678901234567",
     "woonplaatsIdentificatie": "3456789012345678",
-    "adresseerbaarObjectIdentificatie": "4567890123456789",
+    "adresseerbaarObjectIdentificatie": "0599010000208579",
     "pandIdentificaties": ["9876543210123456"],
     "indicatieNevenadres": false,
     "geconstateerd": {
@@ -47,17 +47,17 @@
     }
   },
   {
-    "openbareRuimteNaam": "Straatnaam",
-    "korteNaam": "Str",
-    "huisnummer": 12,
-    "huisletter": "A",
+    "openbareRuimteNaam": "Lange Voorhout",
+    "korteNaam": "Lv",
+    "huisnummer": 25,
+    "huisletter": null,
     "huisnummertoevoeging": null,
-    "postcode": "1234AB",
-    "woonplaatsNaam": "Plaatsnaam",
+    "postcode": "2514EE",
+    "woonplaatsNaam": "Den Haag",
     "nummeraanduidingIdentificatie": "1234567890123456",
     "openbareRuimteIdentificatie": "2345678901234567",
     "woonplaatsIdentificatie": "3456789012345678",
-    "adresseerbaarObjectIdentificatie": "4567890123456789",
+    "adresseerbaarObjectIdentificatie": "0518010000583530",
     "pandIdentificaties": ["9876543210123456"],
     "indicatieNevenadres": false,
     "geconstateerd": {
@@ -94,17 +94,581 @@
     }
   },
   {
-    "openbareRuimteNaam": "Straatnaam",
-    "korteNaam": "Str",
-    "huisnummer": 12,
-    "huisletter": "A",
-    "huisnummertoevoeging": null,
-    "postcode": "1234AB",
-    "woonplaatsNaam": "Plaatsnaam",
+    "openbareRuimteNaam": "Willemsparkweg",
+    "korteNaam": "Wpw",
+    "huisnummer": 18,
+    "huisletter": "B",
+    "huisnummertoevoeging": "3",
+    "postcode": "1071HR",
+    "woonplaatsNaam": "Amsterdam",
     "nummeraanduidingIdentificatie": "1234567890123456",
     "openbareRuimteIdentificatie": "2345678901234567",
     "woonplaatsIdentificatie": "3456789012345678",
-    "adresseerbaarObjectIdentificatie": "4567890123456789",
+    "adresseerbaarObjectIdentificatie": "0518010000583527",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Coolsingel",
+    "korteNaam": "Csg",
+    "huisnummer": 90,
+    "huisletter": null,
+    "huisnummertoevoeging": null,
+    "postcode": "3011AD",
+    "woonplaatsNaam": "Rotterdam",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0518010000583528",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Stadhouderslaan",
+    "korteNaam": "Shl",
+    "huisnummer": 11,
+    "huisletter": "C",
+    "huisnummertoevoeging": null,
+    "postcode": "2517HV",
+    "woonplaatsNaam": "Den Haag",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0518010000583529",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Vredenburg",
+    "korteNaam": "Vbg",
+    "huisnummer": 12,
+    "huisletter": "A",
+    "huisnummertoevoeging": "2",
+    "postcode": "3511BA",
+    "woonplaatsNaam": "Utrecht",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0518010000583531",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Oudezijds Voorburgwal",
+    "korteNaam": "Ovbw",
+    "huisnummer": 104,
+    "huisletter": null,
+    "huisnummertoevoeging": "B",
+    "postcode": "1012GH",
+    "woonplaatsNaam": "Amsterdam",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0530010002090237",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Nieuwe Binnenweg",
+    "korteNaam": "Nbw",
+    "huisnummer": 205,
+    "huisletter": null,
+    "huisnummertoevoeging": null,
+    "postcode": "3021GB",
+    "woonplaatsNaam": "Rotterdam",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0530010002090237",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Korte Poten",
+    "korteNaam": "Kp",
+    "huisnummer": 9,
+    "huisletter": "B",
+    "huisnummertoevoeging": "1",
+    "postcode": "2511EB",
+    "woonplaatsNaam": "Den Haag",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0530010002090237",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Maliebaan",
+    "korteNaam": "Mb",
+    "huisnummer": 45,
+    "huisletter": null,
+    "huisnummertoevoeging": "C",
+    "postcode": "3581CC",
+    "woonplaatsNaam": "Utrecht",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0935010000004817",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Bilderdijkstraat",
+    "korteNaam": "Bds",
+    "huisnummer": 72,
+    "huisletter": "D",
+    "huisnummertoevoeging": null,
+    "postcode": "1053KW",
+    "woonplaatsNaam": "Amsterdam",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0363010001021677",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Schiedamseweg",
+    "korteNaam": "Sdw",
+    "huisnummer": 150,
+    "huisletter": null,
+    "huisnummertoevoeging": "A",
+    "postcode": "3025AH",
+    "woonplaatsNaam": "Rotterdam",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0363010001021677",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Noordeinde",
+    "korteNaam": "Nd",
+    "huisnummer": 68,
+    "huisletter": null,
+    "huisnummertoevoeging": null,
+    "postcode": "2514GN",
+    "woonplaatsNaam": "Den Haag",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0518010001646641",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "Zadelstraat",
+    "korteNaam": "Zs",
+    "huisnummer": 5,
+    "huisletter": "A",
+    "huisnummertoevoeging": null,
+    "postcode": "3511LS",
+    "woonplaatsNaam": "Utrecht",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0518010001773968",
+    "pandIdentificaties": ["9876543210123456"],
+    "indicatieNevenadres": false,
+    "geconstateerd": {
+      "woonplaats": true,
+      "openbareRuimte": true,
+      "nummeraanduiding": true
+    },
+    "inonderzoek": {
+      "openbareRuimteNaam": false,
+      "korteNaam": false,
+      "huisnummer": false,
+      "huisletter": false,
+      "huisnummertoevoeging": false,
+      "postcode": false,
+      "woonplaatsNaam": false,
+      "openbareRuimteLigtIn": false,
+      "openbareRuimteStatus": false,
+      "nummeraanduidingLigtIn": false,
+      "nummeraanduidingligtAan": false,
+      "nummeraanduidingStatus": false,
+      "toelichting": [],
+      "adresregel5": false,
+      "adresregel6": false
+    },
+    "_links": {
+      "self": { "href": "https://api.bag.nl/adressen/1234567890123456" },
+      "openbareRuimte": { "href": "https://api.bag.nl/openbareruimte/2345678901234567" },
+      "nummeraanduiding": { "href": "https://api.bag.nl/nummeraanduiding/1234567890123456" },
+      "woonplaats": { "href": "https://api.bag.nl/woonplaats/3456789012345678" },
+      "adresseerbaarObject": { "href": "https://api.bag.nl/adresseerbaarobject/4567890123456789" },
+      "panden": [
+        { "href": "https://api.bag.nl/panden/9876543210123456" }
+      ]
+    }
+  },
+  {
+    "openbareRuimteNaam": "De Lairessestraat",
+    "korteNaam": "Dls",
+    "huisnummer": 107,
+    "huisletter": null,
+    "huisnummertoevoeging": "B",
+    "postcode": "1075HJ",
+    "woonplaatsNaam": "Amsterdam",
+    "nummeraanduidingIdentificatie": "1234567890123456",
+    "openbareRuimteIdentificatie": "2345678901234567",
+    "woonplaatsIdentificatie": "3456789012345678",
+    "adresseerbaarObjectIdentificatie": "0599010400010274",
     "pandIdentificaties": ["9876543210123456"],
     "indicatieNevenadres": false,
     "geconstateerd": {
