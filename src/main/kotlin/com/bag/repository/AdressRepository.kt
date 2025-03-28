@@ -1,14 +1,13 @@
-package com.kadaster.bag_api.repository
+package com.bag.repository
 
 
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.kadaster.bag_api.model.Address
-import com.kadaster.bag_api.model.AddressResponse
-import com.kadaster.bag_api.model.Embedded
-import com.kadaster.bag_api.model.Link
-import com.kadaster.bag_api.model.Links
-import io.github.oshai.kotlinlogging.KotlinLogging
+import com.bag.model.Address
+import com.bag.model.AddressResponse
+import com.bag.model.Embedded
+import com.bag.model.Link
+import com.bag.model.Links
 import org.springframework.stereotype.Repository
 
 @Repository

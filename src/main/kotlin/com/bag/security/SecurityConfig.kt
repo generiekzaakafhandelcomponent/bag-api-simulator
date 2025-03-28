@@ -1,4 +1,4 @@
-package com.kadaster.bag_api.security
+package com.bag.security
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

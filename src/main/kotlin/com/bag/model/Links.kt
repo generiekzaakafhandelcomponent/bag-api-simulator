@@ -1,4 +1,4 @@
-package com.kadaster.bag_api.model
+package com.bag.model
 
 data class Links(
     val self: Link,

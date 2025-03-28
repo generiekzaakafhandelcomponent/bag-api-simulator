@@ -1,4 +1,4 @@
-package com.kadaster.bag_api
+package com.bag
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

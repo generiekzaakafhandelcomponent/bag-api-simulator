@@ -1,4 +1,4 @@
-package com.kadaster.bag_api.security
+package com.bag.security
 
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest

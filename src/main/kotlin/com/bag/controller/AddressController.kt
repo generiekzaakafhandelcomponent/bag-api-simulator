@@ -1,7 +1,7 @@
-package com.kadaster.bag_api.controller
+package com.bag.controller
 
-import com.kadaster.bag_api.model.AddressResponse
-import com.kadaster.bag_api.service.AddressService
+import com.bag.model.AddressResponse
+import com.bag.service.AddressService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping

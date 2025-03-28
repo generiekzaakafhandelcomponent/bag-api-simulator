@@ -1,4 +1,4 @@
-package com.kadaster.bag_api.security
+package com.bag.security
 
 import org.springframework.security.authentication.AbstractAuthenticationToken
 import org.springframework.security.core.GrantedAuthority

@@ -1,6 +1,6 @@
-package com.kadaster.bag_api.security
+package com.bag.security
 
-import com.kadaster.bag_api.config.AuthProperties
+import com.bag.config.AuthProperties
 import org.springframework.security.authentication.AuthenticationProvider
 import org.springframework.security.authentication.BadCredentialsException
 import org.springframework.security.core.Authentication

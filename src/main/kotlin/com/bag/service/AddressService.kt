@@ -1,7 +1,7 @@
-package com.kadaster.bag_api.service
+package com.bag.service
 
-import com.kadaster.bag_api.model.AddressResponse
-import com.kadaster.bag_api.repository.AddressRepository
+import com.bag.model.AddressResponse
+import com.bag.repository.AddressRepository
 import org.springframework.stereotype.Service
 
 @Service

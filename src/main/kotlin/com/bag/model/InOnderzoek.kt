@@ -1,4 +1,4 @@
-package com.kadaster.bag_api.model
+package com.bag.model
 
 import com.fasterxml.jackson.annotation.JsonInclude
 
