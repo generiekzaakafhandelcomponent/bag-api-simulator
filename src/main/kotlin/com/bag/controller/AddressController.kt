@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api/lvbag/individuelebevragingen/v1/adressen")
+@RequestMapping("/haalcentraal/api/bag/v1/adressen")
 class AddressController(
     private val addressService: AddressService
 ) {
