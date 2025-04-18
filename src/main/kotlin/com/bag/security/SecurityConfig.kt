@@ -24,7 +24,7 @@ class SecurityConfig(
             .csrf { it.disable() }
             .authorizeHttpRequests {
                 it
-                    .requestMatchers("/api/**").authenticated()
+                    .requestMatchers("/haalcentraal/api/**").authenticated()
                     .anyRequest().permitAll()
             }
             .authenticationManager(authenticationManager)
@@ -35,7 +35,7 @@ class SecurityConfig(
 
     @Bean
     fun apiKeyAuthFilter(authenticationManager: AuthenticationManager): ApiKeyAuthFilter {
-        return ApiKeyAuthFilter(environment, AntPathRequestMatcher("/api/**")).apply {
+        return ApiKeyAuthFilter(environment, AntPathRequestMatcher("/haalcentraal/api/**")).apply {
             setAuthenticationManager(authenticationManager)
         }
     }
