@@ -9,9 +9,9 @@ This simulator is ideal for developers who want to test BAG API integrations wit
 
 ## ✨ Features
 
-- ✅ `GET /api/lvbag/individuelebevragingen/v1/adressen`
+- ✅ `GET /haalcentraal/api/bag/v1/adressen`
     - Query address data using:
-        - `postcode` (required)
+        - `postcode` (required) 
         - `huisnummer` (required)
         - `huisletter` (optional)
         - `huisnummertoevoeging` (optional)
@@ -38,7 +38,7 @@ This simulator allows such tests to be run **locally or in CI**, without dependi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ayub-ritense/bag-api-simulator.git
+   git clone https://github.com/generiekzaakafhandelcomponent/bag-api-simulator.git
    cd bag-api-simulator
 
 2. Create a `.env.properties` file in the root:
@@ -51,7 +51,7 @@ This simulator allows such tests to be run **locally or in CI**, without dependi
 
 4. Call the endpoint with curl or Postman:
       ```bash
-      curl "http://localhost:5020/api/lvbag/individuelebevragingen/v1/adressen?postcode=2511BT&huisnummer=70" \
+      curl "http://localhost:5020/haalcentraal/api/bag/v1/adressen?postcode=2511BT&huisnummer=70" \
       -H "X-Api-Key: bag-api-secret"
 
 ### Option 2: Run via Docker
@@ -61,12 +61,12 @@ Pull and run the prebuilt image from Docker Hub:
 docker run -p 5020:5020 \
 -e AUTH_API_KEY=X-Api-Key \
 -e AUTH_API_SECRET=bag-api-secret \
-ayubabdulkader/bag-api-simulator:latest
+generiekzaakafhandelcomponent/bag-api-simulator:latest
    ```
 
 Then test it with:
 ```bash
-curl "http://localhost:5020/api/lvbag/individuelebevragingen/v1/adressen?postcode=2511BT&huisnummer=70" \
+curl "http://localhost:5020/haalcentraal/api/bag/v1/adressen?postcode=2511BT&huisnummer=70" \
 -H "X-Api-Key: bag-api-secret"
    ```
 ---
