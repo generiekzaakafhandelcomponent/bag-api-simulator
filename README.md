@@ -41,34 +41,19 @@ This simulator allows such tests to be run **locally or in CI**, without dependi
    git clone https://github.com/generiekzaakafhandelcomponent/bag-api-simulator.git
    cd bag-api-simulator
 
-2. Create a `.env.properties` file in the root:
-   `AUTH_API_KEY=X-Api-Key
-   AUTH_API_SECRET=bag-api-secret`
+2. Create a `.env.properties` file in the root and add:
+   
+   `AUTH_API_KEY=X-Api-Key` \
+   `AUTH_API_SECRET=bag-api-secret`
 
-3. Build and run the Spring Boot app:
+4. Build and run the Spring Boot app:
    ```bash
    ./gradlew bootRun
 
-4. Call the endpoint with curl or Postman:
+5. Call the endpoint with curl or Postman:
       ```bash
-      curl "http://localhost:5020/haalcentraal/api/bag/v1/adressen?postcode=2511BT&huisnummer=70" \
+      curl "http://localhost:5020/haalcentraal/api/bag/v1/adressen?postcode=1017DK&huisnummer=453" \
       -H "X-Api-Key: bag-api-secret"
-
-### Option 2: Run via Docker
-
-Pull and run the prebuilt image from Docker Hub:
-```bash
-docker run -p 5020:5020 \
--e AUTH_API_KEY=X-Api-Key \
--e AUTH_API_SECRET=bag-api-secret \
-generiekzaakafhandelcomponent/bag-api-simulator:latest
-   ```
-
-Then test it with:
-```bash
-curl "http://localhost:5020/haalcentraal/api/bag/v1/adressen?postcode=2511BT&huisnummer=70" \
--H "X-Api-Key: bag-api-secret"
-   ```
 ---
 
 ## 📂 Project Structure (key components)
