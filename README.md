@@ -17,7 +17,6 @@ This simulator is ideal for developers who want to test BAG API integrations wit
         - `huisnummertoevoeging` (optional)
 - 🔐 API key and secret-based authentication via HTTP headers
 - 🧪 Comes with realistic test address data
-- 🐳 Dockerized for fast local or CI usage
 
 ---
 
