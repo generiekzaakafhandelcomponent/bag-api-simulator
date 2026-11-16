@@ -11,7 +11,7 @@ This simulator is ideal for developers who want to test BAG API integrations wit
 
 - ✅ `GET /haalcentraal/api/bag/v1/adressen`
     - Query address data using:
-        - `postcode` (required)
+        - `postcode` (required) 
         - `huisnummer` (required)
         - `huisletter` (optional)
         - `huisnummertoevoeging` (optional)
